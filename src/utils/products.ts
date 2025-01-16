@@ -1,3 +1,5 @@
+import { createElement } from "react";
+
 import productImg01 from "../images/double-sofa-01.png";
 import productImg02 from "../images/double-sofa-02.png";
 import productImg03 from "../images/double-sofa-03.png";
@@ -33,6 +35,8 @@ import wireless04 from "../images/wireless-04.png";
 import sofaSlide from "../images/hero-img.png";
 import watchSlide from "../images/watch-07.png";
 
+import { MdDirectionsCar, MdHeadphones } from "react-icons/md";
+import { IoCard, IoShieldHalf } from "react-icons/io5";
 export const sliderData = [
   {
     id: 1,
@@ -59,27 +63,27 @@ export const sliderData = [
     cover: watchSlide,
   },
 ];
-export const serviceData = [
+export const FeaturesData = [
   {
-    icon: '<ion-icon name="car"></ion-icon>',
+    icon: createElement(MdDirectionsCar, null),
     title: "Free Shipping",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#fdefe6",
   },
   {
-    icon: '<ion-icon name="card"></ion-icon>',
+    icon: createElement(IoCard, null),
     title: "Safe Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#ceebe9",
   },
   {
-    icon: '<ion-icon name="shield-half-outline"></ion-icon>',
+    icon: createElement(IoShieldHalf, null),
     title: "Secure Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#e2f2b2",
   },
   {
-    icon: '<ion-icon name="headset"></ion-icon>',
+    icon: createElement(MdHeadphones, null),
     title: " Back Guarantee",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#d6e5fb",

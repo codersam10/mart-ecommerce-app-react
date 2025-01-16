@@ -1,8 +1,6 @@
-import { serviceData } from "../utils/products";
 import { IoBag, IoCart, IoPerson } from "react-icons/io5";
 import { NavLink } from "react-router";
 const Header = () => {
-  console.log(serviceData);
 
   return (
     <header className=" shadow-xl">
