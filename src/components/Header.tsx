@@ -9,7 +9,7 @@ const Header = () => {
       <div className="flex justify-between px-5 h-14 max-w-screen-2xl mx-auto">
         <div className="logo">
           <NavLink
-            to="/"
+            to="/mart-ecommerce-app-react/"
             className="flex gap-1 p-4"
           >
             <span><IoBag /></span>
@@ -20,7 +20,7 @@ const Header = () => {
           <ul className="flex gap-1 h-full">
             <li>
               <NavLink
-                to="/"
+                to="/mart-ecommerce-app-react/"
                 className="grid place-content-center p-4 hover:underline"
               >
                 Home
@@ -28,7 +28,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/shop"
+                to="/mart-ecommerce-app-react/shop"
                 className="grid place-content-center p-4 hover:underline"
               >
                 Shop
@@ -36,7 +36,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/cart"
+                to="/mart-ecommerce-app-react/cart"
                 className="grid place-content-center p-4 hover:underline"
               >
                 Cart
@@ -47,7 +47,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/cart"
+                to="/mart-ecommerce-app-react/cart"
                 className="p-4 inline-block w-full h-full"
               >
                 <IoCart />

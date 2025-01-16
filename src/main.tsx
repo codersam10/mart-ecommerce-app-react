@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/mart-ecommerce-app-react/"
             element={<App />}
           >
             <Route
@@ -22,15 +22,15 @@ createRoot(document.getElementById("root")!).render(
               element={<Home />}
             />
             <Route
-              path="shop"
+              path="/mart-ecommerce-app-react/shop"
               element={<Shop />}
             />
             <Route
-              path="cart"
+              path="/mart-ecommerce-app-react/cart"
               element={<Cart />}
             />
             <Route
-              path="product/:id"
+              path="/mart-ecommerce-app-react/product/:id"
               element={<ProductDetails />}
             />
           </Route>
