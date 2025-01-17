@@ -1,9 +1,10 @@
 import { IoBag, IoCart, IoPerson } from "react-icons/io5";
 import { NavLink } from "react-router";
+import LimitContentWidth from "../utils/LimitContentWidth";
 const Header = () => {
   return (
     <header className="shadow-xl backdrop-blur-lg bg-[hsla(0,0%,100%,0.5)] sticky bg- top-0 left-0 right-0 z-50">
-      <div className="flex justify-between px-5 h-14 max-w-screen-2xl mx-auto">
+      <LimitContentWidth classNames="flex justify-between px-5 h-14">
         <div className="logo">
           <NavLink
             to="/mart-ecommerce-app-react/"
@@ -15,7 +16,6 @@ const Header = () => {
             <h1>MART</h1>
           </NavLink>
         </div>
-
         <nav className="hidden md:block">
           <ul className="flex gap-1 h-full">
             <li>
@@ -55,7 +55,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </LimitContentWidth>
     </header>
   );
 };

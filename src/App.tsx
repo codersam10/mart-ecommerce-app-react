@@ -6,11 +6,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="max-w-screen-2xl mx-auto">
-        <Outlet />
-      </div>
-        <Footer/>
-        <BottomNav />
+      <Outlet />
+      <Footer />
+      <BottomNav />
     </>
   );
 };
