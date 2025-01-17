@@ -1,7 +1,7 @@
 import Carousel from "../components/Carousel";
 import FeatureCard from "../components/FeatureCard";
 import ProductCard from "../components/ProductCard";
-import withDiscount from "../components/withDiscount";
+import withDiscount from "../utils/withDiscount";
 import { FeaturesData, discountProducts } from "../utils/products";
 
 const Home = () => {
