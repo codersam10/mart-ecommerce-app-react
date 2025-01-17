@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const BottomNav = () => {
   return (
-    <nav className="md:hidden sticky bottom-0 left-0 right-0 backdrop-blur-xl rounded-lg overflow-hidden z-50">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 backdrop-blur-xl bg-[hsla(0,0%,100%,0.5)] overflow-hidden z-50">
       <ul className="flex justify-stretch h-full">
         <li className="border grow">
           <NavLink
