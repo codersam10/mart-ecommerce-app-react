@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const BottomNav = () => {
   return (
-    <nav className="md:hidden sticky bottom-0 left-0 right-0 backdrop-blur-xl rounded-lg overflow-hidden">
+    <nav className="md:hidden sticky bottom-0 left-0 right-0 backdrop-blur-xl rounded-lg overflow-hidden z-50">
       <ul className="flex justify-stretch h-full">
         <li className="border grow">
           <NavLink
@@ -30,14 +30,14 @@ const BottomNav = () => {
           </NavLink>
         </li>
         <li className="p-4 border grow">
-          <IoPerson />
+          <IoPerson style={{ margin: "0 auto"}}/>
         </li>
         <li className="border grow">
           <NavLink
             to="/mart-ecommerce-app-react/cart"
             className="p-4 inline-block w-full h-full"
           >
-            <IoCart />
+            <IoCart style={{ margin: "0 auto"}}/>
           </NavLink>
         </li>
       </ul>

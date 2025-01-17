@@ -37,6 +37,7 @@ import watchSlide from "../images/watch-07.png";
 
 import { MdDirectionsCar, MdHeadphones } from "react-icons/md";
 import { IoCard, IoShieldHalf } from "react-icons/io5";
+
 export const sliderData = [
   {
     id: 1,
@@ -65,32 +66,31 @@ export const sliderData = [
 ];
 export const FeaturesData = [
   {
-    icon: createElement(MdDirectionsCar, null),
+    icon: createElement(MdDirectionsCar, { style: { margin: "0 auto" } }),
     title: "Free Shipping",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#fdefe6",
   },
   {
-    icon: createElement(IoCard, null),
+    icon: createElement(IoCard, { style: { margin: "0 auto" } }),
     title: "Safe Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#ceebe9",
   },
   {
-    icon: createElement(IoShieldHalf, null),
+    icon: createElement(IoShieldHalf, { style: { margin: "0 auto" } }),
     title: "Secure Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#e2f2b2",
   },
   {
-    icon: createElement(MdHeadphones, null),
+    icon: createElement(MdHeadphones, { style: { margin: "0 auto" } }),
     title: " Back Guarantee",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#d6e5fb",
   },
 ];
-
-export const discoutProducts = [
+export const discountProducts = [
   {
     id: "01",
     productName: "Stone and Beam Westview ",
@@ -226,7 +226,6 @@ export const discoutProducts = [
     avgRating: 4.8,
   },
 ];
-
 export const products = [
   {
     id: "01",

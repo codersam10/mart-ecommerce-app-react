@@ -2,7 +2,7 @@ import { IoBag, IoCart, IoPerson } from "react-icons/io5";
 import { NavLink } from "react-router";
 const Header = () => {
   return (
-    <header className="shadow-xl backdrop-blur-lg sticky bg- top-0 left-0 right-0">
+    <header className="shadow-xl backdrop-blur-lg sticky bg- top-0 left-0 right-0 z-50">
       <div className="flex justify-between px-5 h-14 max-w-screen-2xl mx-auto">
         <div className="logo">
           <NavLink

@@ -20,7 +20,7 @@ const FeatureCard = ({
 
   return (
     <div style={styles}>
-      <div className="py-3">{icon}</div>
+      <div className="py-3 mx-auto">{icon}</div>
       <h3 className="py-3">{title}</h3>
       <p className="py-3">{subtitle}</p>
     </div>

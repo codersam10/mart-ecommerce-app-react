@@ -1,12 +1,15 @@
 import Carousel from "../components/Carousel";
 import FeatureCard from "../components/FeatureCard";
-import { FeaturesData } from "../utils/products";
+import ProductCard from "../components/ProductCard";
+import withDiscount from "../components/withDiscount";
+import { FeaturesData, discountProducts } from "../utils/products";
 
 const Home = () => {
+  const DiscountedCards = withDiscount(ProductCard);
   return (
-    <div>
+    <>
       <Carousel />
-      <div className="flex flex-col md:flex-row gap-2 px-6 py-20">
+      <section className="features flex flex-col md:flex-row gap-2 px-6 py-20">
         {FeaturesData.map((feature, index) => (
           <FeatureCard
             key={index}
@@ -16,8 +19,22 @@ const Home = () => {
             bgColor={feature?.bg}
           />
         ))}
-      </div>
-    </div>
+      </section>
+      <section className="big-discount bg-blue-50 p-10 md:p-10 lg:px-36 lg:py-24">
+        <h2 className="text-2xl font-semibold text-center mb-7">
+          Big Discount
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {discountProducts.map((product) => (
+            <DiscountedCards
+              key={product?.id}
+              productData={product}
+              discount={product?.discount}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import { sliderData as carouselData } from "../utils/products.ts";
 const Carousel = () => {
   return (
-    <div className="flex overflow-x-scroll">
+    <section className="flex overflow-x-scroll">
       {carouselData.map((carouselItem) => (
         <div
           className="flex w-[100vw]"
@@ -21,7 +21,7 @@ const Carousel = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
