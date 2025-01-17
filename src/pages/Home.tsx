@@ -34,6 +34,22 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <section className="new-arrivals">
+        <h2 className="text-2xl font-semibold text-center mb-7">
+          New Arrivals
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {}
+        </div>
+      </section>
+      <section>
+        <h2 className="text-2xl font-semibold text-center mb-7">
+          Best Sales
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {}
+        </div>
+      </section>
     </>
   );
 };
