@@ -12,7 +12,7 @@ type Product = {
   imgUrl: string;
   category: string;
   price: number;
-  discount: number;
+  discount?: number;
   shortDesc: string;
   description: string;
   reviews: Review[];
