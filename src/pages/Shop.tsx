@@ -41,9 +41,9 @@ const Shop = () => {
   return (
     <div>
       <section className="relative h-60">
-        <div className="absolute text-white text-3xl font-semibold top-0 left-0 right-0 bottom-0 grid place-content-center bg-black/50">
+        <h2 className="absolute text-white text-3xl font-semibold top-0 left-0 right-0 bottom-0 grid place-content-center bg-black/50">
           Product
-        </div>
+        </h2>
         <img
           className="w-full h-full object-cover"
           src={heroImg}

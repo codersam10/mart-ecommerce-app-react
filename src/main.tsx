@@ -30,7 +30,7 @@ createRoot(document.getElementById("root")!).render(
               element={<Cart />}
             />
             <Route
-              path="/mart-ecommerce-app-react/product/:id"
+              path="/mart-ecommerce-app-react/:productName/:id"
               element={<ProductDetails />}
             />
           </Route>
