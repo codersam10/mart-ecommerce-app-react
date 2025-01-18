@@ -72,7 +72,7 @@ const ProductDetails = () => {
         />
       </section>
       <LimitContentWidth>
-        <section className="product-details grid grid-cols-1 md:grid-cols-2">
+        <section className="product-details grid grid-cols-1 md:grid-cols-2 px-4">
           <img
             className="w-full h-full object-contain"
             src={imgUrl}
@@ -116,7 +116,7 @@ const ProductDetails = () => {
             </form>
           </div>
         </section>
-        <section className="description-review px-20 py-32">
+        <section className="description-review px-5 md:px-10 lg:px-20 py-32">
           <button
             onClick={() => setIsShowDescription(true)}
             className={`${
