@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 import LimitContentWidth from "../utils/LimitContentWidth";
 const Header = () => {
   return (
-    <header className="shadow-xl backdrop-blur-lg bg-[hsla(0,0%,100%,0.5)] sticky bg- top-0 left-0 right-0 z-50">
+    <header className="shadow-xl backdrop-blur-lg bg-[hsla(0,0%,100%,0.8)] sticky bg- top-0 left-0 right-0 z-50">
       <LimitContentWidth classNames="flex justify-between px-5 h-14">
         <div className="logo">
           <NavLink
