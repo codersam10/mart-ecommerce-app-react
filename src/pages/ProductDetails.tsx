@@ -2,14 +2,16 @@ import { useParams } from "react-router";
 import { products } from "../utils/products";
 import heroImg from "../images/table.jpg";
 import StarRatings from "../components/StarRatings";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../utils/CartContext";
 import ProductCard from "../components/ProductCard";
 import LimitContentWidth from "../utils/LimitContentWidth";
+import { toast } from "react-toastify";
+
 type Review = {
   rating: number;
   text: string;
 };
-
 type Product = {
   id: string;
   productName: string;
@@ -25,13 +27,17 @@ type Product = {
 
 const ProductDetails = () => {
   const params = useParams();
-  const product = products.find((product) => {
-    return product?.id === params?.id;
-  });
 
   const [productQuantity, setProductQuantity] = useState(1);
   const [isShowDescription, setIsShowDescription] = useState(true);
+
+  const { cartData, setCartData } = useContext(CartContext);
+  console.log(cartData);
+
   // handle the case where product is not found
+  const product = products.find((product) => {
+    return product?.id === params?.id;
+  });
   if (!product) {
     return (
       <div className="h-screen grid place-content-center font-bold text-4xl">
@@ -41,6 +47,7 @@ const ProductDetails = () => {
   }
 
   const {
+    id,
     productName,
     imgUrl,
     category,
@@ -56,6 +63,22 @@ const ProductDetails = () => {
       setProductQuantity(1);
     } else {
       setProductQuantity(event.target.valueAsNumber);
+    }
+  };
+
+  const handleAddToCart = (event: React.FormEvent) => {
+    event.preventDefault();
+    //check if already present
+    const isAlreadyPresent = cartData.some((item) => item.id === id);
+    if (isAlreadyPresent) {
+      const updatedCartData = cartData.map((item) => {
+        return item.id === id ? { ...item, quantity: productQuantity } : item;
+      });
+      setCartData(updatedCartData);
+      toast.success("Item quantity updated!");
+    } else {
+      setCartData([...cartData, { ...product, quantity: productQuantity }]);
+      toast.success("Item added to cart!");
     }
   };
 
@@ -94,10 +117,7 @@ const ProductDetails = () => {
             <p className="pt-3">{shortDesc}</p>
             <form
               className="flex flex-col gap-6 max-w-28 pt-10"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Added to cart " + productQuantity);
-              }}
+              onSubmit={handleAddToCart}
             >
               <input
                 className="border border-black px-4 py-1 mr-10 rounded-md"
@@ -155,9 +175,10 @@ const ProductDetails = () => {
             {products
               .filter((product) => product?.category === category)
               .map((product) => (
-                <div>
-                  <ProductCard productData={product} />
-                </div>
+                <ProductCard
+                  key={product?.id}
+                  productData={product}
+                />
               ))}
           </div>
         </section>
