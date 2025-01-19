@@ -2,7 +2,12 @@ import Slider from "../components/Slider";
 import FeatureCard from "../components/FeatureCard";
 import ProductCard from "../components/ProductCard";
 import withDiscount from "../utils/withDiscount";
-import { FeaturesData, discountProducts } from "../utils/products";
+import {
+  FeaturesData,
+  discountProducts,
+  newArrivals,
+  bestSales,
+} from "../utils/products";
 import LimitContentWidth from "../utils/LimitContentWidth";
 
 const Home = () => {
@@ -39,18 +44,28 @@ const Home = () => {
           ))}
         </LimitContentWidth>
       </section>
-      <section className="new-arrivals">
+      <section className="new-arrivals  p-10 md:p-10 lg:px-36 lg:py-24">
         <h2 className="text-2xl font-semibold text-center mb-7">
           New Arrivals
         </h2>
         <LimitContentWidth classNames="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {<div></div>}
+          {newArrivals.map((product) => (
+            <ProductCard
+              key={product?.id}
+              productData={product}
+            />
+          ))}
         </LimitContentWidth>
       </section>
-      <section>
+      <section className="best-sales bg-blue-50 p-10 md:p-10 lg:px-36 lg:py-24">
         <h2 className="text-2xl font-semibold text-center mb-7">Best Sales</h2>
         <LimitContentWidth classNames="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {<div></div>}
+        {bestSales.map((product) => (
+            <ProductCard
+              key={product?.id}
+              productData={product}
+            />
+          ))}
         </LimitContentWidth>
       </section>
     </>
