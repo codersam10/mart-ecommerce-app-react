@@ -1,4 +1,4 @@
-import Carousel from "../components/Carousel";
+import Slider from "../components/Slider";
 import FeatureCard from "../components/FeatureCard";
 import ProductCard from "../components/ProductCard";
 import withDiscount from "../utils/withDiscount";
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <LimitContentWidth>
-        <Carousel />
+        <Slider />
       </LimitContentWidth>
       <section className="features">
         <LimitContentWidth classNames=" flex flex-col md:flex-row gap-2 px-6 py-20">
